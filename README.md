@@ -1,10 +1,15 @@
-# Web Applications: Lab 2 Repository
+# CSC 436 Web Applications - Lab 3
 
-This repository contains the stateless Todo List App
+## User Management:
+- Added `userReducer.js` for manageing user related actions such as LOGIN, REGISTER, and LOGOUT.
+- Updated the login and register components to be controlled components using useState hook.
+- The UserBar component now dynamically renders Login and Register or Logout based on the user state.
 
+## Todo Management:
 
-### Statelessness
+- Added `todoReducer.js` for managing todos and supporting actions like CREATE_TODO, TOGGLE_TODO, and DELETE_TODO.
+- The CreateTodo component has been updated to be a controlled component which  enables instant feedback and resets the form when submitted.
 
-While the app does manage some state, it does not store this state outside of the session. There's no backend database, no local storage, or cookies to persistently save the state.
-
-Once the page is refreshed, any "todos" you added, any "user" you logged in as will be reset. You'll start with a blank slate each time you refresh.
+## Reducers Used:
+- `userReducer`: Manages the user state (whether a user is logged in or out).
+- `todoReducer`: Manages the todo list including creating, toggling completion, and deleting todos from the list
